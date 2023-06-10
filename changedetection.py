@@ -38,11 +38,9 @@ class ChangeDetection:
             i += 1
         self.result_prev = detected_current[:]  # 객체 검출 상태 저장
         print("change flag 000000000000")
-        trigger = True
-        if change_flag == 1 or trigger:
+        if change_flag == 1 :
             print("change flag 111111111111")
             self.send(save_dir, image)
-            trigger = False
 
     def send(self, save_dir, image):
         now = datetime.now()
